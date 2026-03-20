@@ -1,13 +1,36 @@
 @import "bootstrap";
 
 body {
-  font-family: 'Inter Variable', sans-serif;
+  font-family: "Inter Variable", sans-serif;
 }
 
-.jumbo_img{
-    background-image: url('../src/assets/images/black-friday-sales-sign-neon-light_23-2151833076.jpg');
-    height: 500px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.jumbo_img {
+  background-image: url("../src/assets/images/black-friday-sales-sign-neon-light_23-2151833076.jpg");
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card_items_img {
+  height: 350px;
+}
+
+.card_items_description {
+  /*
+Source - https://stackoverflow.com/a/41137262
+Posted by Jobincs, modified by community. See post 'Timeline' for change history
+Retrieved 2026-03-20, License - CC BY-SA 4.0
+*/
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card_item_title {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

@@ -2,43 +2,43 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function Products() {
+  const [products, setProducts] = useState([]);
 
-    const [products, setProducts] = useState([])
+  function getProducts() {
+    axios.get("https://fakestoreapi.com/products").then((data) => {
+      setProducts(data.data);
+    });
+  }
 
-    function getProducts(){
 
-        axios
-          .get("https://fakestoreapi.com/products")
-          .then((data) =>{
-              setProducts(data.data)
-          });
-    }
 
-    console.log(products);
-    
+  useEffect(getProducts, []);
 
-    useEffect(getProducts, [])
-
-  return <main>
-    <section>
+  return (
+    <main>
+      <section>
         <div className="container">
-            <div className="card">
-  <img src="..." className="card-img-top" alt="..."/>
-  <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the car's content.</p>
-  </div>
-  <ul className="list-group list-group-flush">
-    <li className="list-group-item">An item</li>
-    <li className="list-group-item">A second item</li>
-    <li className="list-group-item">A third item</li>
-  </ul>
-  <div className="card-body">
-    <a href="#" className="card-link">Card link</a>
-    <a href="#" className="card-link">Another link</a>
-  </div>
-</div>
+          <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+              {products.map((product) => (
+            <div className="col g-4" key={product.id}>
+                <div className="card h-100">
+                  <img src={product.image} className="card-img-top p-4 object-fit-contain bg-light card_items_img" alt="Product image" />
+                  <div className="card-body d-flex flex-column justify-content-between">
+                    <h5 className="card-title pb-0 mb-0 card_item_title">{product.title}</h5>
+                    <p className="card-subtitle text-body-secondary pt-0 my-0">{product.category}</p>
+                    <p className="card-text card_items_description my-0">
+                     {product.description}
+                    </p>
+                    <p className="my-0">Rating: {product.rating.rate} Stars </p>
+                    <p>Reviews: {product.rating.count}</p>
+                    <p className="fs-3">{product.price} $</p>
+                  </div>
+                </div>
+            </div>
+              ))}
+          </div>
         </div>
-    </section>
-  </main>;
+      </section>
+    </main>
+  );
 }
