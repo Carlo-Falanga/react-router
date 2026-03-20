@@ -4,10 +4,6 @@ body {
   font-family: "Inter Variable", sans-serif;
 }
 
-main {
-  height: 100vh;
-}
-
 .home_jumbo {
   height: 70vh;
   background-image: url(../src/assets/images/2cbf0fe9-16d9-40a4-ad37-94bf0be856ab.png);
@@ -56,6 +52,6 @@ Retrieved 2026-03-20, License - CC BY-SA 4.0
   font-size: 5rem;
 }
 
-.active {
+.nav-item > .active {
   font-weight: bold;
 }
