@@ -1,13 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function AppHeader() {
   return (
     <header>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <NavLink className="navbar-brand" to="/">
+      <nav className="navbar py-4 navbar-expand-lg">
+        <div className="container">
+          <Link className="navbar-brand" to="/">
             Logo
-          </NavLink>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -20,20 +20,20 @@ export default function AppHeader() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">
+                <NavLink className="nav-link px-4" to="/">
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/aboutus">
-                  About Us
+                <NavLink className="nav-link px-4" to="/products">
+                  Products
                 </NavLink>
               </li>
-               <li className="nav-item">
-                <NavLink className="nav-link" to="/products">
-                  Products
+              <li className="nav-item">
+                <NavLink className="nav-link px-4" to="/aboutus">
+                  About Us
                 </NavLink>
               </li>
             </ul>

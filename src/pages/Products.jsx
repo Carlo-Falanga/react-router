@@ -17,21 +17,20 @@ export default function Products() {
   return (
     <main>
       <section>
-        <div className="container">
-          <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+        <div className="container my-5">
+          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4">
               {products.map((product) => (
-            <div className="col g-4" key={product.id}>
+            <div className="col g-3" key={product.id}>
                 <div className="card h-100">
                   <img src={product.image} className="card-img-top p-4 object-fit-contain bg-light card_items_img" alt="Product image" />
-                  <div className="card-body d-flex flex-column justify-content-between">
-                    <h5 className="card-title pb-0 mb-0 card_item_title">{product.title}</h5>
-                    <p className="card-subtitle text-body-secondary pt-0 my-0">{product.category}</p>
-                    <p className="card-text card_items_description my-0">
+                  <div className="card-body d-flex flex-column justify-content-between gap-2">
+                    <h5 className="card-title card_item_title fw-semibold">{product.title}</h5>
+                    <p className="card-subtitle text-body-secondary">{product.category}</p>
+                    <p className="card-text card_items_description">
                      {product.description}
                     </p>
-                    <p className="my-0">Rating: {product.rating.rate} Stars </p>
-                    <p>Reviews: {product.rating.count}</p>
-                    <p className="fs-3">{product.price} $</p>
+                    <p className="">{product.rating.rate} ⭐ - {product.rating.count} reviews</p>
+                    <p className="fs-3 fw-bold mb-0">{product.price} $</p>
                   </div>
                 </div>
             </div>
