@@ -4,16 +4,17 @@ body {
   font-family: "Inter Variable", sans-serif;
 }
 
-.jumbo_img {
-  background-image: url("../src/assets/images/black-friday-sales-sign-neon-light_23-2151833076.jpg");
+.home_jumbo {
   height: 500px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_items_img {
   height: 350px;
+  transition: 0.8s ease;
+}
+
+.card_items_img:hover{
+transform: scale(105%);
 }
 
 .card_items_description {
@@ -33,4 +34,13 @@ Retrieved 2026-03-20, License - CC BY-SA 4.0
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.card_shadow{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow: hidden;
+}
+
+.products_title{
+  font-size: 5rem;
 }

@@ -5,8 +5,8 @@ export default function AppHeader() {
     <header>
       <nav className="navbar py-4 navbar-expand-lg">
         <div className="container">
-          <Link className="navbar-brand" to="/">
-            Logo
+          <Link className="navbar-brand fw-bolder" to="/">
+            Flanagan
           </Link>
           <button
             className="navbar-toggler"
@@ -22,16 +22,16 @@ export default function AppHeader() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link px-4" to="/">
+                <NavLink className="nav-link px-4 fw-medium" to="/">
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item">
+              <li className="nav-item fw-medium">
                 <NavLink className="nav-link px-4" to="/products">
                   Products
                 </NavLink>
               </li>
-              <li className="nav-item">
+              <li className="nav-item fw-medium">
                 <NavLink className="nav-link px-4" to="/aboutus">
                   About Us
                 </NavLink>
