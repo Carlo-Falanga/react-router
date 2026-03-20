@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export default function Home() {
   return (
     <main>
-      <section className="home_jumbo d-flex align-items-center text-center bg-body-secondary">
+      <section className="home_jumbo d-flex align-items-center text-center bg_home_jumbo_color">
         <div className="container">
           <div className="row">
             <div className="col-12">

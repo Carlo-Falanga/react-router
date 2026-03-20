@@ -4,8 +4,19 @@ body {
   font-family: "Inter Variable", sans-serif;
 }
 
+main {
+  height: 100vh;
+}
+
 .home_jumbo {
-  height: 500px;
+  height: 70vh;
+  background-image: url(../src/assets/images/2cbf0fe9-16d9-40a4-ad37-94bf0be856ab.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg_home_jumbo_color {
+  background-color: #f4f4f6;
 }
 
 .card_items_img {
@@ -13,8 +24,8 @@ body {
   transition: 0.8s ease;
 }
 
-.card_items_img:hover{
-transform: scale(105%);
+.card_items_img:hover {
+  transform: scale(105%);
 }
 
 .card_items_description {
@@ -36,11 +47,15 @@ Retrieved 2026-03-20, License - CC BY-SA 4.0
   overflow: hidden;
 }
 
-.card_shadow{
+.card_shadow {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   overflow: hidden;
 }
 
-.products_title{
+.products_title {
   font-size: 5rem;
+}
+
+.active {
+  font-weight: bold;
 }
