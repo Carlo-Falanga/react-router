@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Product({ product }) {
   return (
     <>
@@ -22,6 +24,7 @@ export default function Product({ product }) {
               {product.rating.rate} ⭐ - {product.rating.count} reviews
             </p>
             <p className="fs-3 fw-bold mb-0">{product.price} $</p>
+            <Link to={`/products/${product.id}`}>Buy</Link>
           </div>
         </div>
       </div>

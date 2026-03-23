@@ -3,6 +3,7 @@ import DefaultLayout from "./layout/DefaultLayout";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import AboutUs from "./pages/AboutUs";
+import SingleProduct from "./pages/SingleProduct";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/aboutus" element={<AboutUs/>} />
             <Route path="/products" element={<Products/>} />
+            <Route path="/products/:id" element={<SingleProduct/>}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
