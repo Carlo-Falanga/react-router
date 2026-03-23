@@ -6,8 +6,8 @@ export default function Products() {
   const [products, setProducts] = useState([]);
 
   function getProducts() {
-    axios.get("https://fakestoreapi.com/products").then((data) => {
-      setProducts(data.data);
+    axios.get("https://fakestoreapi.com/products").then((res) => {
+      setProducts(res.data);
     });
   }
 
@@ -15,7 +15,7 @@ export default function Products() {
 
   return (
     <main>
-      <section className="">
+      <section>
         <div className="container text-center my-5 py-5">
           <h1 className="fw-bolder products_title">Our Products</h1>
           <p className="text-secondary-emphasis">
