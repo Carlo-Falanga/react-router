@@ -40,6 +40,8 @@ export default function SingleProduct() {
     navigate(`/products/${nextId}`);
   }
 
+
+// Direction-based product transition using Framer Motion (AI-assisted)
   const slideVariants = {
     initial: (direction) => ({
       opacity: 0,
@@ -63,6 +65,7 @@ export default function SingleProduct() {
         {product !== null && (
           <section>
             <div className="container">
+
               <motion.div
                 key={id}
                 variants={slideVariants}
