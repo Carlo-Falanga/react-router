@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Product from "../components/Product";
+import Loader from "../components/Loader";
 
 export default function Products() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(null);
 
   function getProducts() {
     axios.get("https://fakestoreapi.com/products").then((res) => {
@@ -26,6 +27,9 @@ export default function Products() {
       </section>
 
       <section>
+        {products === null && <Loader/>}
+        {products !== null && (
+
         <div className="container my-5">
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4">
             {products.map((product) => (
@@ -33,6 +37,7 @@ export default function Products() {
             ))}
           </div>
         </div>
+        )}
       </section>
     </main>
   );

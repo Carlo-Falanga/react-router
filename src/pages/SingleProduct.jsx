@@ -31,7 +31,7 @@ export default function SingleProduct() {
 
   return (
     <>
-    {product === null && <Loader></Loader>}
+    {product === null && <Loader/>}
 
       {product !== null && (
         <section>
