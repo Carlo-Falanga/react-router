@@ -24,7 +24,7 @@ export default function Product({ product }) {
               {product.rating.rate} ⭐ - {product.rating.count} reviews
             </p>
             <p className="fs-3 fw-bold mb-0">{product.price} $</p>
-            <Link className="btn btn-primary rounded-pill px-4 py-2" to={`/products/${product.id}`}>Buy</Link>
+            <Link className="btn btn-outline-primary rounded-pill px-4 py-2" to={`/products/${product.id}`}>Buy</Link>
           </div>
         </div>
       </div>

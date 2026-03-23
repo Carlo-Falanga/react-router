@@ -76,12 +76,6 @@ export default function SingleProduct() {
                   Add to cart
                 </Link>
               </div>
-              <div className="row row-cols-1 my-5">
-
-              <div className="col ">
-               
-              </div>
-              </div>
             </div>
           </div>
         </section>
