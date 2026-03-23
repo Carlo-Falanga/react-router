@@ -9,9 +9,6 @@ export default function SingleProduct() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-
-  
-
   const api_url = `https://fakestoreapi.com/products/${id}`;
 
   useEffect(() => {
@@ -23,15 +20,25 @@ export default function SingleProduct() {
       .catch((err) => {
         navigate("/404");
         console.log(err);
-        
       });
   }, [id, navigate]);
 
+  const productId = Number(id);
+  const prevId = productId - 1;
+  const nextId = productId + 1;
+  const maxId = 20
 
+  function goPrev() {
+    navigate(`/products/${prevId}`);
+  }
+
+  function goNext() {
+    navigate(`/products/${nextId}`);
+  }
 
   return (
     <>
-    {product === null && <Loader/>}
+      {product === null && <Loader />}
 
       {product !== null && (
         <section>
@@ -41,6 +48,24 @@ export default function SingleProduct() {
                 <img className="w-75" src={product.image} alt="" />
               </div>
               <div className="col">
+                <div className="text-end text-center my-3 text-lg-end ">
+
+                 <button
+                  onClick={goPrev}
+                  className="btn mx-1"
+                  disabled={productId === 1}
+                >
+                  <i className="bi bi-caret-left-fill"></i>
+                </button>
+                <button
+                  onClick={goNext}
+                  className="btn mx-1"
+                  disabled={productId === maxId}
+                >
+                  <i className="bi bi-caret-right-fill"></i>
+                </button>
+
+                </div>
                 <h3>{product.title}</h3>
                 <span className="fw-bold">{product.price} $</span>
                 <p className="py-4">{product.description}</p>
@@ -50,6 +75,12 @@ export default function SingleProduct() {
                 >
                   Add to cart
                 </Link>
+              </div>
+              <div className="row row-cols-1 my-5">
+
+              <div className="col ">
+               
+              </div>
               </div>
             </div>
           </div>
